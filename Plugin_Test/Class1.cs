@@ -11,12 +11,9 @@ namespace Plugin_Test
     {
         public void Execute(IServiceProvider serviceProvider)
         {
-            ITracingService tracingService =
-                (ITracingService)serviceProvider.GetService(typeof(ITracingService));
-            IPluginExecutionContext context = (IPluginExecutionContext)
-                serviceProvider.GetService(typeof(IPluginExecutionContext));
-            if (context.InputParameters.Contains("Target") &&
-               context.InputParameters["Target"] is Entity)
+            ITracingService tracingService =(ITracingService)serviceProvider.GetService(typeof(ITracingService));
+            IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
             {
 
                 Entity entity = (Entity)context.InputParameters["Target"];
