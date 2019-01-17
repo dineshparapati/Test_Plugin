@@ -80,7 +80,7 @@ namespace UnitTestCreateTask
 
                 //ACT
                 //instantiate the plugin object and execute it with the testserviceprovider
-                UnitTestPlugin followupPlugin = new UnitTestPlugin();
+                Class1 followupPlugin = new Class1();
                 followupPlugin.Execute(serviceProvider);
 
                 //ASSERT
